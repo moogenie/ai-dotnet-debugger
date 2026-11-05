@@ -1,0 +1,182 @@
+body {
+  color: var(--vscode-foreground);
+  font-family: var(--vscode-font-family);
+  font-size: var(--vscode-font-size);
+  padding: 0 8px 8px;
+}
+
+#status {
+  border-bottom: 1px solid var(--vscode-panel-border);
+  padding-bottom: 6px;
+}
+
+#status p {
+  margin: 4px 0;
+}
+
+.control-panel {
+  margin-bottom: 4px;
+}
+
+.modes {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+button.mode.selected {
+  outline: 1px solid var(--vscode-focusBorder);
+}
+
+.holder.person {
+  color: var(--vscode-editorWarning-foreground);
+}
+
+.proposal {
+  border-left: 3px solid var(--vscode-editorWarning-foreground);
+  padding-left: 8px;
+}
+
+.proposal.approved {
+  border-left-color: var(--vscode-testing-iconPassed);
+}
+
+.proposal.rejected,
+.proposal.cancelled,
+.proposal.expired {
+  border-left-color: var(--vscode-panel-border);
+}
+
+.proposal-text {
+  font-family: var(--vscode-editor-font-family);
+  margin: 2px 0;
+}
+
+.control-change {
+  color: var(--vscode-descriptionForeground);
+  font-style: italic;
+}
+
+.listening.yes::before,
+.listening.no::before {
+  content: "\25CF  ";
+}
+
+.listening.yes::before {
+  color: var(--vscode-testing-iconPassed);
+}
+
+.listening.no::before {
+  color: var(--vscode-descriptionForeground);
+}
+
+.item {
+  margin: 8px 0;
+}
+
+h2.session {
+  font-size: 1em;
+  margin-top: 12px;
+}
+
+.stop,
+.note,
+.question {
+  border-left: 3px solid var(--vscode-panel-border);
+  padding-left: 8px;
+}
+
+.stop.current {
+  border-left-color: var(--vscode-debugIcon-pauseForeground, var(--vscode-focusBorder));
+}
+
+.question {
+  border-left-color: var(--vscode-textLink-foreground);
+}
+
+.title {
+  font-size: 1em;
+  margin: 0;
+}
+
+.meta,
+.empty {
+  color: var(--vscode-descriptionForeground);
+  margin: 2px 0;
+}
+
+.waiting {
+  font-style: italic;
+}
+
+.location {
+  font-family: var(--vscode-editor-font-family);
+  margin: 2px 0;
+  overflow-wrap: anywhere;
+}
+
+.narration {
+  background: var(--vscode-textBlockQuote-background);
+  border-left: 3px solid var(--vscode-textBlockQuote-border);
+  margin: 4px 0;
+  padding: 4px 8px;
+  white-space: pre-wrap;
+}
+
+.question-text {
+  margin: 2px 0;
+  white-space: pre-wrap;
+}
+
+#ask {
+  border-top: 1px solid var(--vscode-panel-border);
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+#ask label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+textarea {
+  background: var(--vscode-input-background);
+  border: 1px solid var(--vscode-input-border, transparent);
+  box-sizing: border-box;
+  color: var(--vscode-input-foreground);
+  font-family: inherit;
+  resize: vertical;
+  width: 100%;
+}
+
+#ask-hint {
+  color: var(--vscode-descriptionForeground);
+  margin: 4px 0;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+button {
+  background: var(--vscode-button-background);
+  border: none;
+  color: var(--vscode-button-foreground);
+  cursor: pointer;
+  padding: 4px 10px;
+}
+
+button.secondary {
+  background: var(--vscode-button-secondaryBackground);
+  color: var(--vscode-button-secondaryForeground);
+}
+
+.annotation {
+  border-left: 3px solid var(--vscode-editorInfo-foreground, var(--vscode-focusBorder));
+  padding-left: 8px;
+}
+
+.annotation.cleared {
+  border-left-color: var(--vscode-panel-border);
+}

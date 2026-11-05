@@ -1,0 +1,11 @@
+{
+  "name": "ai-dotnet-debugger-vsix-test-host",
+  "displayName": "AI Debugger .vsix test host",
+  "description": "An empty extension. The .vsix test needs a development path to run its suite, while the extension under test is the installed .vsix.",
+  "version": "0.0.0",
+  "private": true,
+  "publisher": "test",
+  "engines": {
+    "vscode": "^1.100.0"
+  }
+}

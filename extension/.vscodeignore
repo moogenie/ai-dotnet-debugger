@@ -1,0 +1,6 @@
+# Only dist/, resources/, the README and package.json go into the .vsix.
+**
+!dist/**
+!resources/**
+!README.md
+!package.json

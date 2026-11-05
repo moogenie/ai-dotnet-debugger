@@ -1,0 +1,110 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "SampleApp: discount",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-sample-app",
+      "program": "${workspaceFolder}/fixtures/SampleApp/bin/Debug/net10.0/SampleApp.dll",
+      "args": [
+        "discount"
+      ],
+      "cwd": "${workspaceFolder}/fixtures/SampleApp",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "justMyCode": true,
+      "env": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    },
+    {
+      "name": "SampleApp: discount (no implicit func-eval)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-sample-app",
+      "program": "${workspaceFolder}/fixtures/SampleApp/bin/Debug/net10.0/SampleApp.dll",
+      "args": [
+        "discount"
+      ],
+      "cwd": "${workspaceFolder}/fixtures/SampleApp",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "justMyCode": true,
+      "env": {
+        "DOTNET_ENVIRONMENT": "Development"
+      },
+      "expressionEvaluationOptions": {
+        "allowImplicitFuncEval": false
+      }
+    },
+    {
+      "name": "SampleApp: instalments",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-sample-app",
+      "program": "${workspaceFolder}/fixtures/SampleApp/bin/Debug/net10.0/SampleApp.dll",
+      "args": [
+        "instalments"
+      ],
+      "cwd": "${workspaceFolder}/fixtures/SampleApp",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "justMyCode": true,
+      "env": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    },
+    {
+      "name": "SampleApp: refund",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-sample-app",
+      "program": "${workspaceFolder}/fixtures/SampleApp/bin/Debug/net10.0/SampleApp.dll",
+      "args": [
+        "refund"
+      ],
+      "cwd": "${workspaceFolder}/fixtures/SampleApp",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "justMyCode": true,
+      "env": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    },
+    {
+      "name": "SampleApp: all",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-sample-app",
+      "program": "${workspaceFolder}/fixtures/SampleApp/bin/Debug/net10.0/SampleApp.dll",
+      "args": [
+        "all"
+      ],
+      "cwd": "${workspaceFolder}/fixtures/SampleApp",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "justMyCode": true,
+      "env": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    },
+    {
+      "name": "SampleApp: secrets",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-sample-app",
+      "program": "${workspaceFolder}/fixtures/SampleApp/bin/Debug/net10.0/SampleApp.dll",
+      "args": [
+        "secrets"
+      ],
+      "cwd": "${workspaceFolder}/fixtures/SampleApp",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "justMyCode": true,
+      "env": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  ]
+}

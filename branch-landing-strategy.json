@@ -1,0 +1,31 @@
+{
+  "strategy_name": "branch-per-change-owner-review",
+  "intent": "Every change reaches main only through a pull request the owner has reviewed and approved. Changes are small, so each one gets its own branch and its own review. These rules are enforced by the agent and a local pre-push hook.",
+  "rules": [
+    {
+      "rule_id": "one-branch-per-change",
+      "level": "required",
+      "statement": "Each change gets its own branch, named with a conventional-commit type prefix, for example feat/<slug>, fix/<slug> or chore/<slug>."
+    },
+    {
+      "rule_id": "no-direct-to-main",
+      "level": "required",
+      "statement": "Never commit or push to main directly."
+    },
+    {
+      "rule_id": "pull-request-then-stop",
+      "level": "required",
+      "statement": "Open a pull request when the branch is ready, then stop. The description states what changed, the verification evidence, and anything uncertain."
+    },
+    {
+      "rule_id": "merge-only-on-owner-approval",
+      "level": "required",
+      "statement": "Merge only after the owner approves in chat or on the pull request. Use a squash merge with a conventional-commit title, then delete the branch."
+    },
+    {
+      "rule_id": "hook-is-never-bypassed-by-the-agent",
+      "level": "required",
+      "statement": "The agent never uses git push --no-verify or disables the pre-push hook. Only the owner may bypass it."
+    }
+  ]
+}

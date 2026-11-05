@@ -1,0 +1,24 @@
+{
+  "orderId": "SYN-0001",
+  "name": "Synthetic Order (test data)",
+  "products": [
+    { "number": 1, "name": "Synthetic Star", "supplier": "Placeholder Ltd", "isDiscontinued": false },
+    { "number": 2, "name": "Test Pattern", "supplier": "Fixture Ltd", "isDiscontinued": false },
+    { "number": 3, "name": "Mock Turtle", "supplier": "Stub Ltd", "isDiscontinued": false },
+    { "number": 4, "name": "Null Island", "isDiscontinued": true },
+    { "number": 5, "name": "Dummy Run", "supplier": "Sample Ltd", "isDiscontinued": false },
+    { "number": 6, "name": "Edge Case", "supplier": "Example Ltd", "isDiscontinued": false },
+    { "number": 7, "name": "Dry Run", "supplier": "Demo Ltd", "isDiscontinued": false },
+    { "number": 8, "name": "Canary Build", "supplier": "Trial Ltd", "isDiscontinued": false }
+  ],
+  "lines": [
+    { "productNumber": 3, "amount": 200.00 },
+    { "productNumber": 1, "amount": 300.00 },
+    { "productNumber": 6, "amount": 250.00 },
+    { "productNumber": 2, "amount": 150.00 },
+    { "productNumber": 5, "amount": 300.00 }
+  ],
+  "cancelledLines": [
+    { "productNumber": 4, "amount": 25.00 }
+  ]
+}

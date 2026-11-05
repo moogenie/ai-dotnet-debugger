@@ -1,0 +1,17 @@
+{
+  "name": "ai-dotnet-debugger-spike-dap-read",
+  "displayName": "ai-dotnet-debugger spike: DAP read",
+  "description": "Throwaway spike: DAP read. Not product code.",
+  "version": "0.0.0",
+  "private": true,
+  "publisher": "moogenie",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "scripts": {
+    "spike": "node run.js"
+  },
+  "devDependencies": {
+    "@vscode/test-electron": "^3.1.0"
+  }
+}
