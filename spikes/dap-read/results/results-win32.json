@@ -1,0 +1,1810 @@
+{
+  "startedAt": "2026-11-05T13:18:23.045Z",
+  "platform": "win32 10.0.26300 x64",
+  "vscodeVersion": "1.145.0",
+  "csharpVersion": "2.160.4",
+  "csharpExportKeys": [
+    "isLimitedActivation",
+    "initializationFinished",
+    "profferBrokeredServices",
+    "logDirectory",
+    "determineBrowserType",
+    "experimental",
+    "getComponentFolder",
+    "tryToUseVSDbgForMono",
+    "languageServerProcessId",
+    "captureActivityLogs"
+  ],
+  "csharpInitMs": 4287,
+  "runs": {
+    "funcEvalOn": {
+      "config": "SampleApp: discount",
+      "stopped": {
+        "reason": "breakpoint",
+        "threadId": 60072,
+        "allThreadsStopped": true,
+        "hitBreakpointIds": [
+          1
+        ],
+        "source": {
+          "name": "Basket.cs",
+          "path": "<repo>\\fixtures\\SampleApp\\Domain\\Basket.cs"
+        },
+        "line": 24,
+        "column": 9
+      },
+      "top": {
+        "name": "SampleApp.dll!SampleApp.Domain.Basket.Calculate(int productNumber) Line 24",
+        "line": 24,
+        "source": "<repo>\\fixtures\\SampleApp\\Domain\\Basket.cs"
+      },
+      "stackDepth": 2,
+      "scopes": [
+        {
+          "scope": "Locals",
+          "variables": [
+            {
+              "name": "this",
+              "type": "SampleApp.Domain.Basket",
+              "value": "{SampleApp.Domain.Basket}",
+              "presentationHint": {
+                "kind": "data",
+                "attributes": [
+                  "canHaveObjectId"
+                ]
+              }
+            },
+            {
+              "name": "productNumber [int]",
+              "type": "int",
+              "value": "3",
+              "presentationHint": {
+                "kind": "data"
+              }
+            },
+            {
+              "name": "lines [IReadOnlyList]",
+              "type": "System.Collections.Generic.IReadOnlyList<SampleApp.Domain.OrderLine> {System.Collections.Generic.List<SampleApp.Domain.OrderLine>}",
+              "value": "Count = 5",
+              "presentationHint": {
+                "kind": "data",
+                "attributes": [
+                  "canHaveObjectId"
+                ]
+              }
+            },
+            {
+              "name": "net [decimal]",
+              "type": "decimal",
+              "value": "0",
+              "presentationHint": {
+                "kind": "data"
+              }
+            },
+            {
+              "name": "productAmount [decimal]",
+              "type": "decimal",
+              "value": "0",
+              "presentationHint": {
+                "kind": "data"
+              }
+            }
+          ]
+        }
+      ],
+      "counterBefore": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1004
+        }
+      },
+      "thisChildren": [
+        {
+          "name": "Gross [decimal]",
+          "type": "decimal",
+          "value": "1200.00",
+          "presentationHint": {
+            "kind": "property",
+            "attributes": [
+              "canHaveObjectId",
+              "readOnly",
+              "canFavorite"
+            ],
+            "visibility": "public"
+          },
+          "evaluateName": "this.Gross"
+        },
+        {
+          "name": "Summary [string]",
+          "type": "string",
+          "value": "\"Basket: 5 lines, gross GBP 1200.00\"",
+          "presentationHint": {
+            "kind": "property",
+            "attributes": [
+              "canHaveObjectId",
+              "readOnly",
+              "rawString",
+              "canFavorite"
+            ],
+            "visibility": "public"
+          },
+          "evaluateName": "this.Summary"
+        },
+        {
+          "name": "SummaryReads [int]",
+          "type": "int",
+          "value": "1",
+          "presentationHint": {
+            "kind": "property",
+            "attributes": [
+              "readOnly",
+              "canFavorite"
+            ],
+            "visibility": "public"
+          },
+          "evaluateName": "this.SummaryReads"
+        },
+        {
+          "name": "_summaryReads [int]",
+          "type": "int",
+          "value": "1",
+          "presentationHint": {
+            "kind": "data",
+            "attributes": [
+              "canFavorite"
+            ],
+            "visibility": "private"
+          },
+          "evaluateName": "this._summaryReads"
+        },
+        {
+          "name": "lines [IReadOnlyList]",
+          "type": "System.Collections.Generic.IReadOnlyList<SampleApp.Domain.OrderLine> {System.Collections.Generic.List<SampleApp.Domain.OrderLine>}",
+          "value": "Count = 5",
+          "presentationHint": {
+            "kind": "data",
+            "attributes": [
+              "canHaveObjectId",
+              "canFavorite"
+            ],
+            "visibility": "private"
+          }
+        },
+        {
+          "name": "Static members",
+          "value": "",
+          "presentationHint": {
+            "kind": "class",
+            "attributes": [
+              "canHaveObjectId",
+              "readOnly"
+            ]
+          },
+          "evaluateName": "SampleApp.Domain.Basket"
+        }
+      ],
+      "counterAfterExpand": {
+        "ok": true,
+        "value": {
+          "result": "1",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000001",
+          "evaluateResponseReference": 1007
+        }
+      },
+      "linesChildren": [
+        {
+          "name": "[0] [OrderLine]",
+          "value": "{OrderLine { ProductNumber = 3, Amount = 200.00 }}",
+          "presentationHint": {
+            "kind": "data",
+            "attributes": [
+              "canHaveObjectId"
+            ]
+          }
+        },
+        {
+          "name": "[1] [OrderLine]",
+          "value": "{OrderLine { ProductNumber = 1, Amount = 300.00 }}",
+          "presentationHint": {
+            "kind": "data",
+            "attributes": [
+              "canHaveObjectId"
+            ]
+          }
+        },
+        {
+          "name": "[2] [OrderLine]",
+          "value": "{OrderLine { ProductNumber = 6, Amount = 250.00 }}",
+          "presentationHint": {
+            "kind": "data",
+            "attributes": [
+              "canHaveObjectId"
+            ]
+          }
+        },
+        {
+          "name": "[3] [OrderLine]",
+          "value": "{OrderLine { ProductNumber = 2, Amount = 150.00 }}",
+          "presentationHint": {
+            "kind": "data",
+            "attributes": [
+              "canHaveObjectId"
+            ]
+          }
+        },
+        {
+          "name": "[4] [OrderLine]",
+          "value": "{OrderLine { ProductNumber = 5, Amount = 300.00 }}",
+          "presentationHint": {
+            "kind": "data",
+            "attributes": [
+              "canHaveObjectId"
+            ]
+          }
+        },
+        {
+          "name": "Raw View",
+          "value": "",
+          "presentationHint": {
+            "kind": "data",
+            "attributes": [
+              "canHaveObjectId",
+              "readOnly"
+            ]
+          }
+        }
+      ],
+      "linesInner": {
+        "via": "[0] [OrderLine]",
+        "children": [
+          {
+            "name": "Amount [decimal]",
+            "value": "200.00",
+            "presentationHint": {
+              "kind": "property",
+              "attributes": [
+                "canFavorite"
+              ],
+              "visibility": "public"
+            }
+          },
+          {
+            "name": "EqualityContract [Type]",
+            "value": "{SampleApp.Domain.OrderLine}",
+            "presentationHint": {
+              "kind": "property",
+              "attributes": [
+                "readOnly",
+                "canFavorite"
+              ],
+              "visibility": "private"
+            }
+          },
+          {
+            "name": "ProductNumber [int]",
+            "value": "3",
+            "presentationHint": {
+              "kind": "property",
+              "attributes": [
+                "canFavorite"
+              ],
+              "visibility": "public"
+            }
+          }
+        ]
+      },
+      "fieldPath": [
+        {
+          "at": "lines",
+          "children": [
+            "[0] [OrderLine]={OrderLine { ProductNumber = 3, Amount = 200.00 }} kind=data",
+            "[1] [OrderLine]={OrderLine { ProductNumber = 1, Amount = 300.00 }} kind=data",
+            "[2] [OrderLine]={OrderLine { ProductNumber = 6, Amount = 250.00 }} kind=data",
+            "[3] [OrderLine]={OrderLine { ProductNumber = 2, Amount = 150.00 }} kind=data",
+            "[4] [OrderLine]={OrderLine { ProductNumber = 5, Amount = 300.00 }} kind=data",
+            "Raw View= kind=data"
+          ]
+        },
+        {
+          "at": "Raw View",
+          "children": [
+            "Capacity [int]=8 kind=property",
+            "Count [int]=5 kind=property",
+            "Static members= kind=class",
+            "Non-Public members= kind=data"
+          ]
+        },
+        {
+          "at": "Non-Public members",
+          "children": [
+            "System.Collections.Generic.ICollection<SampleApp.Domain.OrderLine>.IsReadOnly [bool]=false kind=property",
+            "System.Collections.ICollection.IsSynchronized [bool]=false kind=property",
+            "System.Collections.ICollection.SyncRoot [object]=Count = 5 kind=property",
+            "System.Collections.IList.IsFixedSize [bool]=false kind=property",
+            "System.Collections.IList.IsReadOnly [bool]=false kind=property",
+            "_items [OrderLine[]]={SampleApp.Domain.OrderLine[8]} kind=data",
+            "_size [int]=5 kind=data",
+            "_version [int]=5 kind=data"
+          ]
+        },
+        {
+          "at": "_items [OrderLine[]]",
+          "children": [
+            "[0] [OrderLine]={OrderLine { ProductNumber = 3, Amount = 200.00 }} kind=data",
+            "[1] [OrderLine]={OrderLine { ProductNumber = 1, Amount = 300.00 }} kind=data",
+            "[2] [OrderLine]={OrderLine { ProductNumber = 6, Amount = 250.00 }} kind=data",
+            "[3] [OrderLine]={OrderLine { ProductNumber = 2, Amount = 150.00 }} kind=data",
+            "[4] [OrderLine]={OrderLine { ProductNumber = 5, Amount = 300.00 }} kind=data",
+            "[5] [OrderLine]=null kind=data",
+            "[6] [OrderLine]=null kind=data",
+            "[7] [OrderLine]=null kind=data"
+          ]
+        },
+        {
+          "at": "[0] [OrderLine]",
+          "children": [
+            "Amount [decimal]=200.00 kind=property",
+            "EqualityContract [Type]={SampleApp.Domain.OrderLine} kind=property",
+            "ProductNumber [int]=3 kind=property"
+          ]
+        }
+      ],
+      "backingFieldEvaluate": {
+        "ok": true,
+        "value": {
+          "result": "error CS1061: 'Basket' does not contain a definition for 'lines' and no accessible extension method 'lines' accepting a first argument of type 'Basket' could be found (are you missing a using directive or an assembly reference?)",
+          "presentationHint": {
+            "attributes": [
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "variablesReference": 0
+        }
+      },
+      "counterAfterLines": {
+        "ok": true,
+        "value": {
+          "result": "1",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000001",
+          "evaluateResponseReference": 1031
+        }
+      },
+      "contexts": [
+        {
+          "context": "repl",
+          "result": "\"Basket: 5 lines, gross GBP 1200.00\"",
+          "counterAfter": "2"
+        },
+        {
+          "context": "hover",
+          "result": "\"Basket: 5 lines, gross GBP 1200.00\"",
+          "counterAfter": "3"
+        },
+        {
+          "context": "clipboard",
+          "result": "Basket: 5 lines, gross GBP 1200.00",
+          "counterAfter": "4"
+        },
+        {
+          "context": "variables",
+          "result": "\"Basket: 5 lines, gross GBP 1200.00\"",
+          "counterAfter": "5"
+        }
+      ],
+      "methodCall": {
+        "ok": true,
+        "value": {
+          "result": "200.00",
+          "type": "decimal",
+          "presentationHint": {
+            "kind": "property",
+            "attributes": [
+              "readOnly"
+            ],
+            "visibility": "public"
+          },
+          "variablesReference": 0,
+          "evaluateResponseReference": 1040
+        }
+      },
+      "counterAfterContexts": {
+        "ok": true,
+        "value": {
+          "result": "5",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000005",
+          "evaluateResponseReference": 1041
+        }
+      },
+      "nseThis": {
+        "expression": "this, nse",
+        "result": "{SampleApp.Domain.Basket}",
+        "children": [
+          {
+            "name": "Gross [decimal]",
+            "value": "1200.00",
+            "evaluateName": "this.Gross",
+            "children": []
+          },
+          {
+            "name": "Summary [string]",
+            "value": "\"Basket: 5 lines, gross GBP 1200.00\"",
+            "evaluateName": "this.Summary",
+            "children": []
+          },
+          {
+            "name": "SummaryReads [int]",
+            "value": "5",
+            "evaluateName": "this.SummaryReads",
+            "children": []
+          },
+          {
+            "name": "_summaryReads [int]",
+            "value": "5",
+            "evaluateName": "this._summaryReads",
+            "children": []
+          },
+          {
+            "name": "lines [IReadOnlyList]",
+            "value": "Count = 5",
+            "children": []
+          },
+          {
+            "name": "Static members",
+            "value": "",
+            "evaluateName": "SampleApp.Domain.Basket",
+            "children": []
+          }
+        ]
+      },
+      "counterAfterNseThis": {
+        "ok": true,
+        "value": {
+          "result": "5",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000005",
+          "evaluateResponseReference": 1046
+        }
+      },
+      "nseLines": {
+        "expression": "lines, nse",
+        "result": "Count = 5",
+        "children": [
+          {
+            "name": "[0] [OrderLine]",
+            "value": "{OrderLine { ProductNumber = 3, Amount = 200.00 }}",
+            "evaluateName": "new System.Collections.Generic.ICollectionDebugView<SampleApp.Domain.OrderLine>(lines).Items[0]",
+            "children": [
+              {
+                "name": "Amount [decimal]",
+                "value": "200.00",
+                "evaluateName": "(new System.Collections.Generic.ICollectionDebugView<SampleApp.Domain.OrderLine>(lines).Items[0]).Amount",
+                "children": []
+              },
+              {
+                "name": "EqualityContract [Type]",
+                "value": "{SampleApp.Domain.OrderLine}",
+                "evaluateName": "(new System.Collections.Generic.ICollectionDebugView<SampleApp.Domain.OrderLine>(lines).Items[0]).EqualityContract",
+                "children": []
+              },
+              {
+                "name": "ProductNumber [int]",
+                "value": "3",
+                "evaluateName": "(new System.Collections.Generic.ICollectionDebugView<SampleApp.Domain.OrderLine>(lines).Items[0]).ProductNumber",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "[1] [OrderLine]",
+            "value": "{OrderLine { ProductNumber = 1, Amount = 300.00 }}",
+            "evaluateName": "new System.Collections.Generic.ICollectionDebugView<SampleApp.Domain.OrderLine>(lines).Items[1]",
+            "children": [
+              {
+                "name": "Amount [decimal]",
+                "value": "300.00",
+                "evaluateName": "(new System.Collections.Generic.ICollectionDebugView<SampleApp.Domain.OrderLine>(lines).Items[1]).Amount",
+                "children": []
+              },
+              {
+                "name": "EqualityContract [Type]",
+                "value": "{SampleApp.Domain.OrderLine}",
+                "evaluateName": "(new System.Collections.Generic.ICollectionDebugView<SampleApp.Domain.OrderLine>(lines).Items[1]).EqualityContract",
+                "children": []
+              },
+              {
+                "name": "ProductNumber [int]",
+                "value": "1",
+                "evaluateName": "(new System.Collections.Generic.ICollectionDebugView<SampleApp.Domain.OrderLine>(lines).Items[1]).ProductNumber",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "[2] [OrderLine]",
+            "value": "{OrderLine { ProductNumber = 6, Amount = 250.00 }}",
+            "evaluateName": "new System.Collections.Generic.ICollectionDebugView<SampleApp.Domain.OrderLine>(lines).Items[2]",
+            "children": []
+          },
+          {
+            "name": "[3] [OrderLine]",
+            "value": "{OrderLine { ProductNumber = 2, Amount = 150.00 }}",
+            "evaluateName": "new System.Collections.Generic.ICollectionDebugView<SampleApp.Domain.OrderLine>(lines).Items[3]",
+            "children": []
+          },
+          {
+            "name": "[4] [OrderLine]",
+            "value": "{OrderLine { ProductNumber = 5, Amount = 300.00 }}",
+            "evaluateName": "new System.Collections.Generic.ICollectionDebugView<SampleApp.Domain.OrderLine>(lines).Items[4]",
+            "children": []
+          },
+          {
+            "name": "Raw View",
+            "value": "",
+            "evaluateName": "lines, nse, raw",
+            "children": []
+          }
+        ]
+      },
+      "counterAfterNseLines": {
+        "ok": true,
+        "value": {
+          "result": "5",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000005",
+          "evaluateResponseReference": 1056
+        }
+      },
+      "counterPreNse": {
+        "ok": true,
+        "value": {
+          "result": "5",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000005",
+          "evaluateResponseReference": 1042
+        }
+      },
+      "nseEvaluate": {
+        "ok": true,
+        "value": {
+          "result": "\"Basket: 5 lines, gross GBP 1200.00\"",
+          "type": "string",
+          "presentationHint": {
+            "kind": "property",
+            "attributes": [
+              "readOnly",
+              "rawString"
+            ],
+            "visibility": "public"
+          },
+          "variablesReference": 0,
+          "evaluateResponseReference": 1057
+        }
+      },
+      "counterAfterNse": {
+        "ok": true,
+        "value": {
+          "result": "5",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000005",
+          "evaluateResponseReference": 1058
+        }
+      },
+      "explicitEvaluate": {
+        "ok": true,
+        "value": {
+          "result": "\"Basket: 5 lines, gross GBP 1200.00\"",
+          "type": "string",
+          "presentationHint": {
+            "kind": "property",
+            "attributes": [
+              "canHaveObjectId",
+              "readOnly",
+              "rawString"
+            ],
+            "visibility": "public"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000016C32CDF3E8",
+          "evaluateResponseReference": 1059
+        }
+      },
+      "counterAfterExplicit": {
+        "ok": true,
+        "value": {
+          "result": "6",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000006",
+          "evaluateResponseReference": 1060
+        }
+      },
+      "finalSummaryLine": "Summary reads: 7"
+    },
+    "funcEvalOff": {
+      "config": "SampleApp: discount (no implicit func-eval)",
+      "stopped": {
+        "reason": "breakpoint",
+        "threadId": 57784,
+        "allThreadsStopped": true,
+        "hitBreakpointIds": [
+          1
+        ],
+        "source": {
+          "name": "Basket.cs",
+          "path": "<repo>\\fixtures\\SampleApp\\Domain\\Basket.cs"
+        },
+        "line": 24,
+        "column": 9
+      },
+      "top": {
+        "name": "SampleApp.dll!SampleApp.Domain.Basket.Calculate(int productNumber) Line 24",
+        "line": 24,
+        "source": "<repo>\\fixtures\\SampleApp\\Domain\\Basket.cs"
+      },
+      "stackDepth": 2,
+      "scopes": [
+        {
+          "scope": "Locals",
+          "variables": [
+            {
+              "name": "this",
+              "type": "SampleApp.Domain.Basket",
+              "value": "{SampleApp.Domain.Basket}",
+              "presentationHint": {
+                "kind": "data",
+                "attributes": [
+                  "canHaveObjectId"
+                ]
+              }
+            },
+            {
+              "name": "productNumber [int]",
+              "type": "int",
+              "value": "3",
+              "presentationHint": {
+                "kind": "data"
+              }
+            },
+            {
+              "name": "lines [IReadOnlyList]",
+              "type": "System.Collections.Generic.IReadOnlyList<SampleApp.Domain.OrderLine> {System.Collections.Generic.List<SampleApp.Domain.OrderLine>}",
+              "value": "Count = Implicit function evaluation is turned off by the user",
+              "presentationHint": {
+                "kind": "data",
+                "attributes": [
+                  "canHaveObjectId"
+                ]
+              }
+            },
+            {
+              "name": "net [decimal]",
+              "type": "decimal",
+              "value": "0",
+              "presentationHint": {
+                "kind": "data"
+              }
+            },
+            {
+              "name": "productAmount [decimal]",
+              "type": "decimal",
+              "value": "0",
+              "presentationHint": {
+                "kind": "data"
+              }
+            }
+          ]
+        }
+      ],
+      "counterBefore": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1004
+        }
+      },
+      "thisChildren": [
+        {
+          "name": "Gross [decimal]",
+          "type": "decimal",
+          "value": "Implicit function evaluation is turned off by the user",
+          "presentationHint": {
+            "attributes": [
+              "canFavorite",
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "evaluateName": "this.Gross"
+        },
+        {
+          "name": "Summary [string]",
+          "type": "string",
+          "value": "Implicit function evaluation is turned off by the user",
+          "presentationHint": {
+            "attributes": [
+              "canFavorite",
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "evaluateName": "this.Summary"
+        },
+        {
+          "name": "SummaryReads [int]",
+          "type": "int",
+          "value": "Implicit function evaluation is turned off by the user",
+          "presentationHint": {
+            "attributes": [
+              "canFavorite",
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "evaluateName": "this.SummaryReads"
+        },
+        {
+          "name": "_summaryReads [int]",
+          "type": "int",
+          "value": "0",
+          "presentationHint": {
+            "kind": "data",
+            "attributes": [
+              "canFavorite"
+            ],
+            "visibility": "private"
+          },
+          "evaluateName": "this._summaryReads"
+        },
+        {
+          "name": "lines [IReadOnlyList]",
+          "type": "System.Collections.Generic.IReadOnlyList<SampleApp.Domain.OrderLine> {System.Collections.Generic.List<SampleApp.Domain.OrderLine>}",
+          "value": "Count = Implicit function evaluation is turned off by the user",
+          "presentationHint": {
+            "kind": "data",
+            "attributes": [
+              "canHaveObjectId",
+              "canFavorite"
+            ],
+            "visibility": "private"
+          }
+        },
+        {
+          "name": "Static members",
+          "value": "",
+          "presentationHint": {
+            "kind": "class",
+            "attributes": [
+              "canHaveObjectId",
+              "readOnly"
+            ]
+          },
+          "evaluateName": "SampleApp.Domain.Basket"
+        }
+      ],
+      "counterAfterExpand": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1009
+        }
+      },
+      "linesChildren": [
+        {
+          "name": "Raw View",
+          "value": "",
+          "presentationHint": {
+            "kind": "data",
+            "attributes": [
+              "canHaveObjectId",
+              "readOnly"
+            ]
+          }
+        }
+      ],
+      "linesInner": {
+        "via": "Raw View",
+        "children": [
+          {
+            "name": "Capacity [int]",
+            "value": "Implicit function evaluation is turned off by the user",
+            "presentationHint": {
+              "attributes": [
+                "readOnly",
+                "failedEvaluation"
+              ]
+            }
+          },
+          {
+            "name": "Count [int]",
+            "value": "Implicit function evaluation is turned off by the user",
+            "presentationHint": {
+              "attributes": [
+                "readOnly",
+                "failedEvaluation"
+              ]
+            }
+          },
+          {
+            "name": "Static members",
+            "value": "",
+            "presentationHint": {
+              "kind": "class",
+              "attributes": [
+                "canHaveObjectId",
+                "readOnly"
+              ]
+            }
+          },
+          {
+            "name": "Non-Public members",
+            "value": "",
+            "presentationHint": {
+              "kind": "data",
+              "attributes": [
+                "canHaveObjectId",
+                "readOnly"
+              ]
+            }
+          }
+        ]
+      },
+      "fieldPath": [
+        {
+          "at": "lines",
+          "children": [
+            "Raw View= kind=data"
+          ]
+        },
+        {
+          "at": "Raw View",
+          "children": [
+            "Capacity [int]=Implicit function evaluation is turned off by the user kind=undefined",
+            "Count [int]=Implicit function evaluation is turned off by the user kind=undefined",
+            "Static members= kind=class",
+            "Non-Public members= kind=data"
+          ]
+        },
+        {
+          "at": "Non-Public members",
+          "children": [
+            "System.Collections.Generic.ICollection<SampleApp.Domain.OrderLine>.IsReadOnly [bool]=Implicit function evaluation is turned off by the user kind=undefined",
+            "System.Collections.ICollection.IsSynchronized [bool]=Implicit function evaluation is turned off by the user kind=undefined",
+            "System.Collections.ICollection.SyncRoot [object]=Implicit function evaluation is turned off by the user kind=undefined",
+            "System.Collections.IList.IsFixedSize [bool]=Implicit function evaluation is turned off by the user kind=undefined",
+            "System.Collections.IList.IsReadOnly [bool]=Implicit function evaluation is turned off by the user kind=undefined",
+            "_items [OrderLine[]]={SampleApp.Domain.OrderLine[8]} kind=data",
+            "_size [int]=5 kind=data",
+            "_version [int]=5 kind=data"
+          ]
+        },
+        {
+          "at": "_items [OrderLine[]]",
+          "children": [
+            "[0]={SampleApp.Domain.OrderLine} kind=data",
+            "[1]={SampleApp.Domain.OrderLine} kind=data",
+            "[2]={SampleApp.Domain.OrderLine} kind=data",
+            "[3]={SampleApp.Domain.OrderLine} kind=data",
+            "[4]={SampleApp.Domain.OrderLine} kind=data",
+            "[5] [OrderLine]=null kind=data",
+            "[6] [OrderLine]=null kind=data",
+            "[7] [OrderLine]=null kind=data"
+          ]
+        },
+        {
+          "at": "[0]",
+          "children": [
+            "Amount [decimal]=Implicit function evaluation is turned off by the user kind=undefined",
+            "EqualityContract [Type]=Implicit function evaluation is turned off by the user kind=undefined",
+            "ProductNumber [int]=Implicit function evaluation is turned off by the user kind=undefined"
+          ]
+        }
+      ],
+      "backingFieldEvaluate": {
+        "ok": true,
+        "value": {
+          "result": "error CS1061: 'Basket' does not contain a definition for 'lines' and no accessible extension method 'lines' accepting a first argument of type 'Basket' could be found (are you missing a using directive or an assembly reference?)",
+          "presentationHint": {
+            "attributes": [
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "variablesReference": 0
+        }
+      },
+      "counterAfterLines": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1022
+        }
+      },
+      "contexts": [
+        {
+          "context": "repl",
+          "result": "Implicit function evaluation is turned off by the user",
+          "counterAfter": "0"
+        },
+        {
+          "context": "hover",
+          "result": "ERR: Implicit function evaluation is turned off by the user",
+          "counterAfter": "0"
+        },
+        {
+          "context": "clipboard",
+          "result": "Implicit function evaluation is turned off by the user",
+          "counterAfter": "0"
+        },
+        {
+          "context": "variables",
+          "result": "Implicit function evaluation is turned off by the user",
+          "counterAfter": "0"
+        }
+      ],
+      "methodCall": {
+        "ok": true,
+        "value": {
+          "result": "Implicit function evaluation is turned off by the user",
+          "type": "decimal",
+          "presentationHint": {
+            "attributes": [
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "variablesReference": 0
+        }
+      },
+      "counterAfterContexts": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1027
+        }
+      },
+      "nseThis": {
+        "expression": "this, nse",
+        "result": "{SampleApp.Domain.Basket}",
+        "children": [
+          {
+            "name": "Gross [decimal]",
+            "value": "Implicit function evaluation is turned off by the user",
+            "evaluateName": "this.Gross",
+            "children": []
+          },
+          {
+            "name": "Summary [string]",
+            "value": "Implicit function evaluation is turned off by the user",
+            "evaluateName": "this.Summary",
+            "children": []
+          },
+          {
+            "name": "SummaryReads [int]",
+            "value": "Implicit function evaluation is turned off by the user",
+            "evaluateName": "this.SummaryReads",
+            "children": []
+          },
+          {
+            "name": "_summaryReads [int]",
+            "value": "0",
+            "evaluateName": "this._summaryReads",
+            "children": []
+          },
+          {
+            "name": "lines [IReadOnlyList]",
+            "value": "Count = Implicit function evaluation is turned off by the user",
+            "children": []
+          },
+          {
+            "name": "Static members",
+            "value": "",
+            "evaluateName": "SampleApp.Domain.Basket",
+            "children": []
+          }
+        ]
+      },
+      "counterAfterNseThis": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1032
+        }
+      },
+      "nseLines": {
+        "expression": "lines, nse",
+        "result": "Count = Implicit function evaluation is turned off by the user",
+        "children": [
+          {
+            "name": "Raw View",
+            "value": "",
+            "evaluateName": "lines, nse, raw",
+            "children": []
+          }
+        ]
+      },
+      "counterAfterNseLines": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1035
+        }
+      },
+      "counterPreNse": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1028
+        }
+      },
+      "nseEvaluate": {
+        "ok": true,
+        "value": {
+          "result": "Implicit function evaluation is turned off by the user",
+          "type": "string",
+          "presentationHint": {
+            "attributes": [
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "variablesReference": 0
+        }
+      },
+      "counterAfterNse": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1036
+        }
+      },
+      "explicitEvaluate": {
+        "ok": true,
+        "value": {
+          "result": "Implicit function evaluation is turned off by the user",
+          "type": "string",
+          "presentationHint": {
+            "attributes": [
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "variablesReference": 0
+        }
+      },
+      "counterAfterExplicit": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1037
+        }
+      },
+      "controlProof": [
+        {
+          "t": "2026-11-05T13:18:30.070Z",
+          "dir": "to-adapter",
+          "type": "request",
+          "command": "next",
+          "seq": 50,
+          "origin": "extension"
+        },
+        {
+          "t": "2026-11-05T13:18:30.103Z",
+          "dir": "to-adapter",
+          "type": "request",
+          "command": "next",
+          "seq": 52,
+          "origin": "not-extension"
+        }
+      ],
+      "finalSummaryLine": "Summary reads: 1"
+    },
+    "funcEvalOffRaw": {
+      "config": "SampleApp: discount (no implicit func-eval) + {\"showRawValues\":true}",
+      "stopped": {
+        "reason": "breakpoint",
+        "threadId": 42668,
+        "allThreadsStopped": true,
+        "hitBreakpointIds": [
+          1
+        ],
+        "source": {
+          "name": "Basket.cs",
+          "path": "<repo>\\fixtures\\SampleApp\\Domain\\Basket.cs"
+        },
+        "line": 24,
+        "column": 9
+      },
+      "top": {
+        "name": "SampleApp.dll!SampleApp.Domain.Basket.Calculate(int productNumber) Line 24",
+        "line": 24,
+        "source": "<repo>\\fixtures\\SampleApp\\Domain\\Basket.cs"
+      },
+      "stackDepth": 2,
+      "scopes": [
+        {
+          "scope": "Locals",
+          "variables": [
+            {
+              "name": "this",
+              "type": "SampleApp.Domain.Basket",
+              "value": "{SampleApp.Domain.Basket}",
+              "presentationHint": {
+                "kind": "data",
+                "attributes": [
+                  "canHaveObjectId"
+                ]
+              }
+            },
+            {
+              "name": "productNumber [int]",
+              "type": "int",
+              "value": "3",
+              "presentationHint": {
+                "kind": "data"
+              }
+            },
+            {
+              "name": "lines [IReadOnlyList]",
+              "type": "System.Collections.Generic.IReadOnlyList<SampleApp.Domain.OrderLine> {System.Collections.Generic.List<SampleApp.Domain.OrderLine>}",
+              "value": "Count = Implicit function evaluation is turned off by the user",
+              "presentationHint": {
+                "kind": "data",
+                "attributes": [
+                  "canHaveObjectId"
+                ]
+              }
+            },
+            {
+              "name": "net [decimal]",
+              "type": "decimal",
+              "value": "0",
+              "presentationHint": {
+                "kind": "data"
+              }
+            },
+            {
+              "name": "productAmount [decimal]",
+              "type": "decimal",
+              "value": "0",
+              "presentationHint": {
+                "kind": "data"
+              }
+            }
+          ]
+        }
+      ],
+      "counterBefore": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1003
+        }
+      },
+      "thisChildren": [
+        {
+          "name": "Gross [decimal]",
+          "type": "decimal",
+          "value": "Implicit function evaluation is turned off by the user",
+          "presentationHint": {
+            "attributes": [
+              "canFavorite",
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "evaluateName": "this.Gross, raw"
+        },
+        {
+          "name": "Summary [string]",
+          "type": "string",
+          "value": "Implicit function evaluation is turned off by the user",
+          "presentationHint": {
+            "attributes": [
+              "canFavorite",
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "evaluateName": "this.Summary, raw"
+        },
+        {
+          "name": "SummaryReads [int]",
+          "type": "int",
+          "value": "Implicit function evaluation is turned off by the user",
+          "presentationHint": {
+            "attributes": [
+              "canFavorite",
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "evaluateName": "this.SummaryReads, raw"
+        },
+        {
+          "name": "_summaryReads [int]",
+          "type": "int",
+          "value": "0",
+          "presentationHint": {
+            "kind": "data",
+            "attributes": [
+              "canFavorite"
+            ],
+            "visibility": "private"
+          },
+          "evaluateName": "this._summaryReads, raw"
+        },
+        {
+          "name": "lines [IReadOnlyList]",
+          "type": "System.Collections.Generic.IReadOnlyList<SampleApp.Domain.OrderLine> {System.Collections.Generic.List<SampleApp.Domain.OrderLine>}",
+          "value": "Count = Implicit function evaluation is turned off by the user",
+          "presentationHint": {
+            "kind": "data",
+            "attributes": [
+              "canHaveObjectId",
+              "canFavorite"
+            ],
+            "visibility": "private"
+          }
+        },
+        {
+          "name": "Static members",
+          "value": "",
+          "presentationHint": {
+            "kind": "class",
+            "attributes": [
+              "canHaveObjectId",
+              "readOnly"
+            ]
+          },
+          "evaluateName": "SampleApp.Domain.Basket"
+        }
+      ],
+      "counterAfterExpand": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1006
+        }
+      },
+      "linesChildren": [
+        {
+          "name": "Capacity [int]",
+          "value": "Implicit function evaluation is turned off by the user",
+          "presentationHint": {
+            "attributes": [
+              "readOnly",
+              "failedEvaluation"
+            ]
+          }
+        },
+        {
+          "name": "Count [int]",
+          "value": "Implicit function evaluation is turned off by the user",
+          "presentationHint": {
+            "attributes": [
+              "readOnly",
+              "failedEvaluation"
+            ]
+          }
+        },
+        {
+          "name": "Static members",
+          "value": "",
+          "presentationHint": {
+            "kind": "class",
+            "attributes": [
+              "canHaveObjectId",
+              "readOnly"
+            ]
+          }
+        },
+        {
+          "name": "Non-Public members",
+          "value": "",
+          "presentationHint": {
+            "kind": "data",
+            "attributes": [
+              "canHaveObjectId",
+              "readOnly"
+            ]
+          }
+        }
+      ],
+      "fieldPath": [
+        {
+          "at": "lines",
+          "children": [
+            "Capacity [int]=Implicit function evaluation is turned off by the user kind=undefined",
+            "Count [int]=Implicit function evaluation is turned off by the user kind=undefined",
+            "Static members= kind=class",
+            "Non-Public members= kind=data"
+          ]
+        },
+        {
+          "at": "Non-Public members",
+          "children": [
+            "System.Collections.Generic.ICollection<SampleApp.Domain.OrderLine>.IsReadOnly [bool]=Implicit function evaluation is turned off by the user kind=undefined",
+            "System.Collections.ICollection.IsSynchronized [bool]=Implicit function evaluation is turned off by the user kind=undefined",
+            "System.Collections.ICollection.SyncRoot [object]=Implicit function evaluation is turned off by the user kind=undefined",
+            "System.Collections.IList.IsFixedSize [bool]=Implicit function evaluation is turned off by the user kind=undefined",
+            "System.Collections.IList.IsReadOnly [bool]=Implicit function evaluation is turned off by the user kind=undefined",
+            "_items [OrderLine[]]={SampleApp.Domain.OrderLine[8]} kind=data",
+            "_size [int]=5 kind=data",
+            "_version [int]=5 kind=data"
+          ]
+        },
+        {
+          "at": "_items [OrderLine[]]",
+          "children": [
+            "[0]={SampleApp.Domain.OrderLine} kind=data",
+            "[1]={SampleApp.Domain.OrderLine} kind=data",
+            "[2]={SampleApp.Domain.OrderLine} kind=data",
+            "[3]={SampleApp.Domain.OrderLine} kind=data",
+            "[4]={SampleApp.Domain.OrderLine} kind=data",
+            "[5] [OrderLine]=null kind=data",
+            "[6] [OrderLine]=null kind=data",
+            "[7] [OrderLine]=null kind=data"
+          ]
+        },
+        {
+          "at": "[0]",
+          "children": [
+            "Amount [decimal]=Implicit function evaluation is turned off by the user kind=undefined",
+            "EqualityContract [Type]=Implicit function evaluation is turned off by the user kind=undefined",
+            "ProductNumber [int]=Implicit function evaluation is turned off by the user kind=undefined"
+          ]
+        }
+      ],
+      "backingFieldEvaluate": {
+        "ok": true,
+        "value": {
+          "result": "error CS1061: 'Basket' does not contain a definition for 'lines' and no accessible extension method 'lines' accepting a first argument of type 'Basket' could be found (are you missing a using directive or an assembly reference?)",
+          "presentationHint": {
+            "attributes": [
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "variablesReference": 0
+        }
+      },
+      "counterAfterLines": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1020
+        }
+      },
+      "contexts": [
+        {
+          "context": "repl",
+          "result": "Implicit function evaluation is turned off by the user",
+          "counterAfter": "0"
+        },
+        {
+          "context": "hover",
+          "result": "ERR: Implicit function evaluation is turned off by the user",
+          "counterAfter": "0"
+        },
+        {
+          "context": "clipboard",
+          "result": "Implicit function evaluation is turned off by the user",
+          "counterAfter": "0"
+        },
+        {
+          "context": "variables",
+          "result": "Implicit function evaluation is turned off by the user",
+          "counterAfter": "0"
+        }
+      ],
+      "methodCall": {
+        "ok": true,
+        "value": {
+          "result": "Implicit function evaluation is turned off by the user",
+          "type": "decimal",
+          "presentationHint": {
+            "attributes": [
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "variablesReference": 0
+        }
+      },
+      "counterAfterContexts": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1025
+        }
+      },
+      "nseThis": {
+        "expression": "this, nse",
+        "result": "{SampleApp.Domain.Basket}",
+        "children": [
+          {
+            "name": "Gross [decimal]",
+            "value": "Implicit function evaluation is turned off by the user",
+            "evaluateName": "this.Gross, raw",
+            "children": []
+          },
+          {
+            "name": "Summary [string]",
+            "value": "Implicit function evaluation is turned off by the user",
+            "evaluateName": "this.Summary, raw",
+            "children": []
+          },
+          {
+            "name": "SummaryReads [int]",
+            "value": "Implicit function evaluation is turned off by the user",
+            "evaluateName": "this.SummaryReads, raw",
+            "children": []
+          },
+          {
+            "name": "_summaryReads [int]",
+            "value": "0",
+            "evaluateName": "this._summaryReads, raw",
+            "children": []
+          },
+          {
+            "name": "lines [IReadOnlyList]",
+            "value": "Count = Implicit function evaluation is turned off by the user",
+            "children": []
+          },
+          {
+            "name": "Static members",
+            "value": "",
+            "evaluateName": "SampleApp.Domain.Basket",
+            "children": []
+          }
+        ]
+      },
+      "counterAfterNseThis": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1030
+        }
+      },
+      "nseLines": {
+        "expression": "lines, nse",
+        "result": "Count = Implicit function evaluation is turned off by the user",
+        "children": [
+          {
+            "name": "Capacity [int]",
+            "value": "Implicit function evaluation is turned off by the user",
+            "evaluateName": "((System.Collections.Generic.List<SampleApp.Domain.OrderLine>)lines).Capacity, raw",
+            "children": []
+          },
+          {
+            "name": "Count [int]",
+            "value": "Implicit function evaluation is turned off by the user",
+            "evaluateName": "((System.Collections.Generic.List<SampleApp.Domain.OrderLine>)lines).Count, raw",
+            "children": []
+          },
+          {
+            "name": "Static members",
+            "value": "",
+            "evaluateName": "System.Collections.Generic.List<SampleApp.Domain.OrderLine>",
+            "children": []
+          },
+          {
+            "name": "Non-Public members",
+            "value": "",
+            "evaluateName": "lines, hidden",
+            "children": []
+          }
+        ]
+      },
+      "counterAfterNseLines": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1034
+        }
+      },
+      "counterPreNse": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1026
+        }
+      },
+      "nseEvaluate": {
+        "ok": true,
+        "value": {
+          "result": "Implicit function evaluation is turned off by the user",
+          "type": "string",
+          "presentationHint": {
+            "attributes": [
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "variablesReference": 0
+        }
+      },
+      "counterAfterNse": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1035
+        }
+      },
+      "explicitEvaluate": {
+        "ok": true,
+        "value": {
+          "result": "Implicit function evaluation is turned off by the user",
+          "type": "string",
+          "presentationHint": {
+            "attributes": [
+              "readOnly",
+              "failedEvaluation"
+            ]
+          },
+          "variablesReference": 0
+        }
+      },
+      "counterAfterExplicit": {
+        "ok": true,
+        "value": {
+          "result": "0",
+          "type": "int",
+          "presentationHint": {
+            "kind": "data",
+            "visibility": "private"
+          },
+          "variablesReference": 0,
+          "memoryReference": "0x0000000000000000",
+          "evaluateResponseReference": 1036
+        }
+      },
+      "finalSummaryLine": "Summary reads: 1"
+    },
+    "exception": {
+      "config": "SampleApp: refund",
+      "stopped": {
+        "reason": "exception",
+        "threadId": 9788,
+        "text": "An unhandled exception of type 'System.NullReferenceException' occurred in SampleApp.dll",
+        "allThreadsStopped": true,
+        "source": {
+          "name": "Refunds.cs",
+          "path": "<repo>\\fixtures\\SampleApp\\Domain\\Refunds.cs"
+        },
+        "line": 11,
+        "column": 13
+      },
+      "exceptionInfo": {
+        "ok": true,
+        "value": {
+          "exceptionId": "CLR/System.NullReferenceException",
+          "description": "An unhandled exception of type 'System.NullReferenceException' occurred in SampleApp.dll: 'Object reference not set to an instance of an object.'",
+          "breakMode": "unhandled",
+          "details": {
+            "message": "Object reference not set to an instance of an object.",
+            "typeName": "NullReferenceException",
+            "fullTypeName": "System.NullReferenceException",
+            "evaluateName": "$exception",
+            "stackTrace": "   at SampleApp.Domain.Refunds.Describe(Order order) in <repo>\\fixtures\\SampleApp\\Domain\\Refunds.cs:line 11\r\n   at Program.<Main>$(String[] args) in <repo>\\fixtures\\SampleApp\\Program.cs:line 30",
+            "formattedDescription": "**System.NullReferenceException:** 'Object reference not set to an instance of an object\\.'",
+            "hresult": -2147467261,
+            "source": "SampleApp"
+          },
+          "code": 0
+        }
+      },
+      "top": {
+        "name": "SampleApp.dll!SampleApp.Domain.Refunds.Describe(SampleApp.Domain.Order order) Line 11",
+        "line": 11
+      },
+      "supplier": {
+        "ok": true,
+        "value": {
+          "result": "null",
+          "type": "string",
+          "presentationHint": {
+            "kind": "property",
+            "attributes": [
+              "readOnly"
+            ],
+            "visibility": "public"
+          },
+          "variablesReference": 0,
+          "evaluateResponseReference": 1012
+        }
+      },
+      "isDiscontinued": {
+        "ok": true,
+        "value": {
+          "result": "true",
+          "type": "bool",
+          "presentationHint": {
+            "kind": "property",
+            "attributes": [
+              "readOnly",
+              "isBoolean",
+              "isTrue"
+            ],
+            "visibility": "public"
+          },
+          "variablesReference": 0,
+          "evaluateResponseReference": 1013
+        }
+      }
+    }
+  },
+  "finishedAt": "2026-11-05T13:18:39.829Z",
+  "messageCount": 653,
+  "startAttempts": []
+}

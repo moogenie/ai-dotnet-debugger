@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build-sample-app",
+      "type": "process",
+      "command": "dotnet",
+      "args": ["build", "${workspaceFolder}/fixtures/SampleApp/SampleApp.csproj", "-nologo"],
+      "problemMatcher": "$msCompile",
+      "group": "build"
+    }
+  ]
+}

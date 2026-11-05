@@ -1,0 +1,22 @@
+# Node and VS Code extension build output
+node_modules/
+out/
+dist/
+*.vsix
+.vscode-test/
+
+# .NET fixture build output
+bin/
+obj/
+
+# Local audit logs and environment files never leave the machine
+*.audit.jsonl
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Raw DAP message logs from spikes are large and not cited as evidence. results-*.json is kept.
+spikes/*/results/messages-*.json

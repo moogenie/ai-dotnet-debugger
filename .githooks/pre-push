@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+// Refuses any push that would update main on the remote.
+// Main changes only through a reviewed pull request (see branch-landing-strategy.json).
+// Written in Node so it runs the same under Git for Windows and macOS.
+const lines = require("node:fs").readFileSync(0, "utf8").split(/\r?\n/).filter(Boolean);
+const blocked = lines
+  .map((line) => line.split(" ")[2])
+  .filter((remoteRef) => remoteRef === "refs/heads/main");
+if (blocked.length > 0) {
+  process.stderr.write(
+    "pre-push: refusing to push to main.\n" +
+      "Main changes only through a pull request the owner has approved.\n" +
+      "Push a branch instead, for example: git push -u origin feat/<slug>\n"
+  );
+  process.exit(1);
+}

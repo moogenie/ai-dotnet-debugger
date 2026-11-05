@@ -1,0 +1,187 @@
+{
+  "name": "ai-dotnet-debugger",
+  "displayName": "AI Debugger",
+  "description": "Lets an AI agent and a person debug a local .NET process together. Test data only.",
+  "version": "0.0.1",
+  "private": true,
+  "publisher": "moogenie",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moogenie/ai-dotnet-debugger.git"
+  },
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "onFail": "error",
+      "version": ">=11.0.0"
+    }
+  },
+  "categories": [
+    "Debuggers"
+  ],
+  "activationEvents": [
+    "onDebug",
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "category": "AI Debugger",
+        "command": "aiDebugger.enableForWorkspace",
+        "title": "Enable for this workspace"
+      },
+      {
+        "category": "AI Debugger",
+        "command": "aiDebugger.disableForWorkspace",
+        "title": "Disable for this workspace"
+      },
+      {
+        "category": "AI Debugger",
+        "command": "aiDebugger.openAuditLog",
+        "title": "Open audit log"
+      },
+      {
+        "category": "AI Debugger",
+        "command": "aiDebugger.registerWithClaudeCode",
+        "title": "Register with Claude Code"
+      },
+      {
+        "category": "AI Debugger",
+        "command": "aiDebugger.restartServer",
+        "title": "Restart MCP server (new token)"
+      },
+      {
+        "category": "AI Debugger",
+        "command": "aiDebugger.askAgent",
+        "title": "Ask the agent"
+      },
+      {
+        "category": "AI Debugger",
+        "command": "aiDebugger.openJournal",
+        "title": "Open Debug Journal"
+      },
+      {
+        "category": "AI Debugger",
+        "command": "aiDebugger.setControlMode",
+        "title": "Set control mode (Pair, Watch or Observe)"
+      },
+      {
+        "category": "AI Debugger",
+        "command": "aiDebugger.takeControl",
+        "title": "Take control from the agent"
+      },
+      {
+        "category": "AI Debugger",
+        "command": "aiDebugger.handBack",
+        "title": "Hand control back to the agent"
+      },
+      {
+        "category": "AI Debugger",
+        "command": "aiDebugger.decideProposal",
+        "title": "Decide a proposal"
+      },
+      {
+        "category": "AI Debugger",
+        "command": "aiDebugger.clearAnnotations",
+        "title": "Clear the agent's annotations"
+      },
+      {
+        "category": "AI Debugger",
+        "command": "aiDebugger.dismissAnnotation",
+        "title": "Dismiss an agent annotation"
+      },
+      {
+        "category": "AI Debugger",
+        "command": "aiDebugger.installSkill",
+        "title": "Install the debug-pair skill for Claude Code"
+      }
+    ],
+    "configuration": {
+      "title": "AI Debugger",
+      "properties": {
+        "aiDebugger.port": {
+          "default": 18300,
+          "description": "The loopback port of the MCP server. If the port is taken, the server does not start; it never moves to another port.",
+          "maximum": 65535,
+          "minimum": 1024,
+          "scope": "machine",
+          "type": "integer"
+        },
+        "aiDebugger.redaction.additionalRules": {
+          "default": [],
+          "description": "Extra redaction rules, each a name and a regular expression. They add to the built-in rules, which always apply and cannot be turned off.",
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "pattern": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "pattern"
+            ],
+            "type": "object"
+          },
+          "scope": "window",
+          "type": "array"
+        }
+      }
+    },
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "aiDebugger.decideProposal",
+          "when": "false"
+        },
+        {
+          "command": "aiDebugger.dismissAnnotation",
+          "when": "false"
+        }
+      ]
+    },
+    "views": {
+      "debug": [
+        {
+          "id": "aiDebugger.journal",
+          "name": "AI Debug Journal",
+          "type": "webview"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsc -p . && tsc -p tsconfig.webview.json && node scripts/bundle.mjs",
+    "lint": "eslint src && tsc -p tsconfig.eslint.json",
+    "package": "npm run build && vsce package --no-dependencies --skip-license --out ai-dotnet-debugger.vsix",
+    "test": "vitest run",
+    "test:integration": "npm run build && node ./out/test/integration/run.js",
+    "test:vsix": "npm run package && node ./out/test/vsix/run-vsix.js",
+    "verify": "npm run lint && npm run build && npm test && node ./out/test/integration/run.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/mocha": "10.0.10",
+    "@types/node": "24.19.2",
+    "@types/vscode": "1.100.0",
+    "@vscode/test-electron": "3.1.0",
+    "@vscode/vsce": "4.0.0",
+    "esbuild": "0.28.2",
+    "eslint": "10.12.0",
+    "mocha": "12.0.3",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.2",
+    "vitest": "5.0.4"
+  }
+}
