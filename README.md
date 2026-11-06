@@ -108,6 +108,10 @@ git config core.hooksPath .githooks
 
 Changes reach `main` only through a reviewed pull request. See `branch-landing-strategy.json`.
 
+## Security
+
+Report a vulnerability privately. See `SECURITY.md`. Do not open a public issue.
+
 ## Licence
 
 MIT. See `LICENSE`.
