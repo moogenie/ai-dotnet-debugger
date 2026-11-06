@@ -16,7 +16,12 @@ We reply within 7 days. We tell you when a fix is ready, and we credit you in th
 
 ## Supported versions
 
-Only the latest release on the Visual Studio Marketplace gets security fixes.
+Only the latest version gets security fixes:
+
+- the latest release on the Visual Studio Marketplace, when the extension is published there;
+- the `.vsix` that you build from the latest commit on `main`.
+
+Before you report a problem, check that it also occurs in one of these versions.
 
 ## In scope
 
