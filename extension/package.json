@@ -1,6 +1,6 @@
 {
   "name": "ai-dotnet-debugger",
-  "displayName": "AI Debugger",
+  "displayName": "AI .NET Debugger",
   "description": "Lets an AI agent and a person debug a local .NET process together. Test data only.",
   "icon": "resources/icon.png",
   "version": "0.0.1",
