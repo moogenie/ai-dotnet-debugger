@@ -1,4 +1,4 @@
-# AI Debugger
+# AI .NET Debugger
 
 Debug a local .NET program together with Claude Code. Claude drives the real VS Code debugger. You watch every move, ask questions at a stop, and take control at any time.
 
