@@ -50,7 +50,7 @@ function runClaude(helperCommand: string, cwd: string, prompt: string): Promise<
   // Claude Code itself must use the person's own config to sign in, so the test folder is not passed on.
   const env = { ...process.env };
   delete env.CLAUDE_CONFIG_DIR;
-  const args = ["-p", prompt, "--mcp-config", JSON.stringify(config), "--strict-mcp-config", "--allowedTools", "mcp__ai-debugger", "--output-format", "json"];
+  const args = ["-p", prompt, "--mcp-config", JSON.stringify(config), "--strict-mcp-config", "--allowedTools", "mcp__ai-dotnet-debugger", "--output-format", "json"];
   return new Promise((resolve, reject) => {
     const child = spawn("claude", args, { cwd, env, shell: false, windowsHide: true });
     let stdout = "";

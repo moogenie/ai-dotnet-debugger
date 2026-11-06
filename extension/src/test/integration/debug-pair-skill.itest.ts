@@ -11,7 +11,7 @@ import { agentDrives, enable, getHarness, replyToWarnings, repoRoot, restoreWarn
 // Claude works in a copy of the workspace without fixtures/answer-key, so it can only find a bug by debugging.
 const ENABLED = process.env.AI_DEBUGGER_CLAUDE_E2E === "1";
 const RUN_TIMEOUT_MS = 900_000;
-const ALLOWED_TOOLS = ["mcp__ai-debugger", "Read", "Grep", "Glob", "Skill"];
+const ALLOWED_TOOLS = ["mcp__ai-dotnet-debugger", "Read", "Grep", "Glob", "Skill"];
 const DENIED_TOOLS = ["Bash", "Edit", "Write", "NotebookEdit", "WebFetch", "WebSearch", "Read(//**/answer-key/**)"];
 const CHANGING_TOOLS = new Set(["Bash", "Edit", "Write", "NotebookEdit", "MultiEdit"]);
 
@@ -94,7 +94,7 @@ function runSkill(harness: IHarness, cwd: string, prompt: string): Promise<ISkil
 }
 
 function toolName(use: IToolUse): string {
-  return use.name.replace(/^mcp__ai-debugger__/, "");
+  return use.name.replace(/^mcp__ai-dotnet-debugger__/, "");
 }
 
 // What every run must show, whatever the bug: the skill was used, nothing was changed, and the answer key was not touched.
