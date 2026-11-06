@@ -1,6 +1,8 @@
-# Only dist/, resources/, the README and package.json go into the .vsix.
+# Only dist/, resources/, the README, the changelog, the licence and package.json go into the .vsix.
 **
 !dist/**
 !resources/**
 !README.md
+!CHANGELOG.md
+!LICENSE
 !package.json

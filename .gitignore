@@ -3,6 +3,9 @@ node_modules/
 out/
 dist/
 *.vsix
+
+# The licence copy that npm run package makes for the .vsix. The root LICENSE is the source.
+extension/LICENSE
 .vscode-test/
 
 # .NET fixture build output
