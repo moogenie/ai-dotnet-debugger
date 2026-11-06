@@ -24,7 +24,7 @@ Any program running as you can read your own credential store. While the server 
 
 You need VS Code 1.100 or later, the C# extension (`ms-dotnettools.csharp`), a .NET SDK, and Claude Code.
 
-1. Install the package: run `code --install-extension ai-dotnet-debugger.vsix`, or choose 'Install from VSIX...' in the Extensions view.
+1. Install **AI .NET Debugger** from the Extensions view, or run `code --install-extension moogenie.ai-dotnet-debugger`. VS Code installs the C# extension with it. To install a local build, run `code --install-extension ai-dotnet-debugger.vsix`.
 2. Open your project folder and trust it.
 3. Run **AI Debugger: Enable for this workspace**. Read the statement and confirm.
 4. Run **AI Debugger: Register with Claude Code**. It shows the exact entry it adds to your Claude Code user config, and asks first. To undo it, run `claude mcp remove ai-dotnet-debugger -s user`.

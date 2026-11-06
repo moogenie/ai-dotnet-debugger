@@ -63,7 +63,7 @@ The diagram below is the summary. `extension/README.md` lists the tools.
 - Not a remote or production debugger.
 - Not an automatic fixer. It finds and explains. The person decides.
 - Not a replacement for tests. Findings should lead to a failing test, through the existing bugfix flow.
-- No Marketplace publishing in the first cut. It installs locally from a `.vsix`.
+- No Marketplace publishing in the first cut. It installed locally from a `.vsix`. This changed after the first cut: version 0.0.1 went to the Visual Studio Marketplace as a preview on 6 Nov 2026.
 
 ## Stack
 
