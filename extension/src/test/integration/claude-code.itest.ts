@@ -2,6 +2,7 @@ import * as assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import * as path from "node:path";
 import * as vscode from "vscode";
+import type { JournalItem } from "../../journal/webview/journal-protocol";
 import { claudeServerEntry } from "../../mcp/registration";
 import { agentDrives, enable, getHarness, repoRoot, stopAll, type IHarness } from "./harness";
 
@@ -98,6 +99,9 @@ async function untilJournal<T>(run: Promise<IClaudeRun>, read: () => T | undefin
   afterEach(() => stopAll());
 
   it("stops at a breakpoint, narrates it in the Journal and answers a question asked from the Journal", async () => {
+    // The Journal keeps items from earlier test files, and stop IDs start again in each session. Read only new items.
+    const since = Math.max(0, ...harness.journal.state().items.map((item) => item.id));
+    const items = (): JournalItem[] => harness.journal.state().items.filter((item) => item.id > since);
     const run = runClaude(
       harness,
       "Use only the ai-dotnet-debugger MCP tools. Set a breakpoint at fixtures/SampleApp/Domain/Basket.cs line 24. " +
@@ -112,7 +116,7 @@ async function untilJournal<T>(run: Promise<IClaudeRun>, read: () => T | undefin
     );
     await vscode.window.showTextDocument(vscode.Uri.file(path.join(repoRoot(), "fixtures/SampleApp/Domain/Basket.cs")));
     const narrated = await untilJournal(run, () => {
-      const stop = harness.journal.state().items.find((item) => item.kind === "stop");
+      const stop = items().find((item) => item.kind === "stop");
       const isAnnotated = harness.annotations.store.list().some((annotation) => annotation.line === 24);
       return stop?.kind === "stop" && stop.narrations.length > 0 && isAnnotated && harness.mcp.isAgentListening ? stop : undefined;
     });
@@ -122,14 +126,14 @@ async function untilJournal<T>(run: Promise<IClaudeRun>, read: () => T | undefin
     assert.ok(Array.isArray(result.localNames) && result.localNames.includes("lines"), JSON.stringify(result));
     assert.equal(result.questionStopId, narrated.stopId);
     assert.equal(result.questionLine, 24);
-    const stop = harness.journal.state().items.find((item) => item.kind === "stop" && item.stopId === narrated.stopId);
+    const stop = items().find((item) => item.kind === "stop" && item.stopId === narrated.stopId);
     const notes = stop?.kind === "stop" ? stop.narrations.map((narration) => narration.text) : [];
     console.log(`Journal narrations: ${JSON.stringify(notes)}`);
-    const question = harness.journal.state().items.find((item) => item.kind === "question");
+    const question = items().find((item) => item.kind === "question");
     const answers = question?.kind === "question" ? (question.answers ?? []).map((answer) => answer.text) : [];
     console.log(`Answers under the question: ${JSON.stringify(answers)}`);
     assert.ok(answers.length >= 1, "Claude should answer under the question");
-    const pinned = harness.journal.state().items.flatMap((item) => (item.kind === "annotation" ? [item.annotation.text] : []));
+    const pinned = items().flatMap((item) => (item.kind === "annotation" ? [item.annotation.text] : []));
     console.log(`Annotations: ${JSON.stringify(pinned)}`);
     assert.ok(notes.length >= 1, "Claude should narrate the stop");
   });
