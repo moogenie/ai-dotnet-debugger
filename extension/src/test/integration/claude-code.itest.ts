@@ -27,7 +27,7 @@ function runClaude(harness: IHarness, prompt: string): Promise<IClaudeRun> {
     JSON.stringify(config),
     "--strict-mcp-config",
     "--allowedTools",
-    "mcp__ai-debugger",
+    "mcp__ai-dotnet-debugger",
     "--output-format",
     "json",
   ];
