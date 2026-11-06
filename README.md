@@ -4,9 +4,9 @@ A VS Code extension that lets an AI agent and a person debug a local .NET proces
 
 Claude Code drives the real VS Code debugger over MCP. It sets breakpoints, steps, and reads the stack, locals and watch results. You watch every move in the normal debug UI. You can ask a question at any breakpoint, and you can take control at any time.
 
-**Status:** packaged as a local `.vsix`. To install and use it, read `extension/README.md`.
+**Status:** preview. It is on the Visual Studio Marketplace as [AI .NET Debugger](https://marketplace.visualstudio.com/items?itemName=moogenie.ai-dotnet-debugger). To install and use it, read `extension/README.md`.
 
-## Build and install
+## Build from source
 
 In `extension/`, with Node 22 or later and npm 11 or later:
 
