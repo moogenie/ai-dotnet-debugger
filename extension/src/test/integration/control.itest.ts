@@ -82,8 +82,12 @@ describe("the control lock against the coreclr debugger", () => {
   });
 
   it("in Pair mode, runs no agent step until the person approves it", async () => {
+    // The Journal keeps items from earlier test files, and stop IDs start again in each session. Read only new items.
+    const since = Math.max(0, ...harness.journal.state().items.map((item) => item.id));
+    const proposals = (): IProposalItem[] =>
+      harness.journal.state().items.filter((item): item is IProposalItem => item.kind === "proposal" && item.id > since);
     const stopId = await stoppedAtBasket();
-    const proposed = harness.journal.state().items.flatMap((item) => (item.kind === "proposal" ? [item.proposal.tool] : []));
+    const proposed = proposals().map((item) => item.proposal.tool);
     assert.ok(!proposed.includes("start_session"), "starting a session needs no approval in Pair mode");
     assert.ok(proposed.includes("set_breakpoint"), "a breakpoint still needs approval in Pair mode");
     const before = harness.events.length;
@@ -91,9 +95,10 @@ describe("the control lock against the coreclr debugger", () => {
     await sleep(QUIET_MS);
     assert.equal(resumes(before), 0, "the step must not run before the approval");
     assert.equal(harness.sessions.currentStop?.stopId, stopId);
-    const shown = harness.journal.state().items.find((item): item is IProposalItem => item.kind === "proposal" && item.proposal.tool === "step");
-    assert.equal(shown?.proposal.status, "pending");
-    assert.equal(shown?.proposal.stopId, stopId);
+    const shown = proposals().find((item) => item.proposal.tool === "step");
+    assert.ok(shown, "the step proposal should show in the Journal");
+    assert.equal(shown.proposal.status, "pending");
+    assert.equal(shown.proposal.stopId, stopId);
 
     await decideNext("step", "approved");
     assert.equal((await step).resumedFromStopId, stopId);
