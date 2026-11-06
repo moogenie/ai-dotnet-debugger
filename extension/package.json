@@ -4,13 +4,29 @@
   "description": "Lets an AI agent and a person debug a local .NET process together. Test data only.",
   "icon": "resources/icon.png",
   "version": "0.0.1",
+  "preview": true,
   "private": true,
   "publisher": "moogenie",
   "license": "MIT",
+  "homepage": "https://github.com/moogenie/ai-dotnet-debugger#readme",
+  "bugs": {
+    "url": "https://github.com/moogenie/ai-dotnet-debugger/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/moogenie/ai-dotnet-debugger.git"
   },
+  "keywords": [
+    "dotnet",
+    "csharp",
+    "debugging",
+    "mcp",
+    "claude",
+    "ai"
+  ],
+  "extensionDependencies": [
+    "ms-dotnettools.csharp"
+  ],
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -162,7 +178,7 @@
   "scripts": {
     "build": "tsc -p . && tsc -p tsconfig.webview.json && node scripts/bundle.mjs",
     "lint": "eslint src && tsc -p tsconfig.eslint.json",
-    "package": "npm run build && vsce package --no-dependencies --skip-license --out ai-dotnet-debugger.vsix",
+    "package": "npm run build && node scripts/copy-license.mjs && vsce package --no-dependencies --out ai-dotnet-debugger.vsix",
     "test": "vitest run",
     "test:integration": "npm run build && node ./out/test/integration/run.js",
     "test:vsix": "npm run package && node ./out/test/vsix/run-vsix.js",
